@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  input:
+    build: 
+      context: ./input
+    ports:
+      - "5000:5000"
+  processor:
+    build: 
+      context: ./processor
+    ports:
+      - "5001:5001"
+  output:
+    build: 
+      context: ./output
+    ports:
+      - "5002:5002"
+    volumes:
+      - ./data/output:/app/output_data
