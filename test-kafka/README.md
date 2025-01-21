@@ -1,13 +1,17 @@
 
-# hello Docker: test-compose
+# hello Docker: test-kafka
 
-Project (Folder) name: `test-compose`
+Project (Folder) name: `test-kafka`
 
 ## Project structure
 
 ```
 .  
 ├── docker-compose.yml
+├── producer
+│   ├── Dockerfile
+│   ├── producer_service.py
+│   ├── requirements.txt
 ├── input
 │   ├── Dockerfile
 │   ├── input_service.py
@@ -26,16 +30,14 @@ Project (Folder) name: `test-compose`
 
 ## How to run it?
 
-1. cd into project directory `...\test-compose`
-2. `docker-compose build`
-3. `docker-compose up`
-4. open a new terminal window, `curl -X POST -H "Content-Type: application/json" -d '{"string": "Hello World"}' http://localhost:5000/send`
+1. cd into project directory `...\test-kafka`
+2. `docker compose build`
+3. `docker compose up`
 
 ```bash
 cd <change-me>\test-compose
-docker-compose build
-docker-compose up
-curl -X POST -H "Content-Type: application/json" -d '{"string": "Hello World"}' http://localhost:5000/send
+docker compose build
+docker compose up 
 ```
 
 ## Explanation
